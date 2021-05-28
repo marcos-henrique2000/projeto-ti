@@ -2,7 +2,6 @@ import ColumnChart from "components/ColumnChart";
 import ColumnChartTotal from "components/ColumnChartTotal";
 import DataTable from "components/DataTable";
 import DonutChart from "components/DonutChart";
-import Footer from "components/Footer";
 import NavBar from "components/NavBar";
 
 function App() {

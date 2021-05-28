@@ -1,5 +1,3 @@
-import Footer from "components/Footer";
-
 const DataTable = () => {
     return (
         <div className="content">
