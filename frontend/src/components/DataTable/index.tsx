@@ -1,7 +1,9 @@
+import Footer from "components/Footer";
+
 const DataTable = () => {
     return (
         <div className="content">
-            <div className="table-responsive">
+            <div className="table-responsive table-wrapper-scroll-y my-custom-scrollbar">
                 <table className="table table-striped table-sm" style={{ textAlign: "center" }}>
                     <thead>
                         <tr style={{ backgroundColor: "black", color: "white" }}>
