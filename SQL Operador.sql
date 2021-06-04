@@ -1,0 +1,17 @@
+INSERT INTO dbo.Operador (operador, cargo) values  
+('Maria', 'Operador'),
+('Renato', 'Operador'),
+('Matheus', 'Operador'),
+('Amanda', 'Operador'),
+('Carlos', 'Operador'),
+('Silvia', 'Operador'),
+('Aline', 'Operador'),
+('Alex',	'Operador'),
+('Jandira', 'Operador'),
+('Sandra', 'Operador'),
+('Caique', 'Operador'),
+('Ivan',	'Operador'),
+('Lucas', 'Operador'),
+('Carla', 'Operador'),
+('Lucas S', 'Operador'),
+('Aline B', 'Operador')
