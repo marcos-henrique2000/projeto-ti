@@ -1,8 +1,8 @@
 package com.marcosti.projetoti.controllers;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,8 +19,8 @@ public class ChamadoController {
 	private ChamadoService service;
 	
 	@GetMapping
-	public ResponseEntity<List<ChamadoDTO>> findAll(){
-		List<ChamadoDTO> list = service.findAll();
+	public ResponseEntity<Page<ChamadoDTO>> findAll(Pageable pageable){
+		Page<ChamadoDTO> list = service.findAll(pageable);
 		return ResponseEntity.ok(list);
 	}
 	

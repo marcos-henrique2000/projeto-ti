@@ -204,7 +204,7 @@ INSERT INTO tb_chamado (titulo, descricao, id_profissional, id_operador, dataCha
 INSERT INTO tb_chamado (titulo, descricao, id_profissional, id_operador, dataChamado, id_nivel) VALUES ('Computador não inicia',	'If you are adding values for all the columns of the table.',	1,	16,	'2020-02-24',	1);
 INSERT INTO tb_chamado (titulo, descricao, id_profissional, id_operador, dataChamado, id_nivel) VALUES ('Pasta não encontrada',	'If you are adding values for all the columns of the table.',	3,	2,	'2020-05-07',	1);
 INSERT INTO tb_chamado (titulo, descricao, id_profissional, id_operador, dataChamado, id_nivel) VALUES ('Troca de teclado',	'If you are adding values for all the columns of the table.',	1,	2,	'2020-05-04',	2);
-INSERT INTO tb_chamado (titulo, descricao, id_profissional, id_operador, dataChamado, id_nivel) VALUES ('troca de monitor',	'If you are adding values for all the columns of the table.',	2,	4,	'2020-02-17',	2);
+INSERT INTO tb_chamado (titulo, descricao, id_profissional, id_operador, dataChamado, id_nivel) VALUES ('troca de monitor',	'If you are adding values for all the columns of the table.',	2,	4,	'2021-02-17',	2);
 INSERT INTO tb_chamado (titulo, descricao, id_profissional, id_operador, dataChamado, id_nivel) VALUES ('RCB não abre',	'If you are adding values for all the columns of the table.',	1,	10,	'2020-05-18',	2);
 INSERT INTO tb_chamado (titulo, descricao, id_profissional, id_operador, dataChamado, id_nivel) VALUES ('Troca de mouse',	'If you are adding values for all the columns of the table.',	1,	1,	'2020-03-20',	2);
 INSERT INTO tb_chamado (titulo, descricao, id_profissional, id_operador, dataChamado, id_nivel) VALUES ('Cadeira não fixa',	'If you are adding values for all the columns of the table.',	2,	2,	'2020-03-18',	1);
