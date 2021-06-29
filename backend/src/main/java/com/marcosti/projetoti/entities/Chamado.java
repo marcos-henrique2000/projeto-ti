@@ -16,10 +16,10 @@ public class Chamado {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	public Long id;
-	public String titulo;
-	public String descricao;
-	public LocalDate dataChamado;
+	private Long id;
+	private String titulo;
+	private String descricao;
+	private LocalDate datachamado;
 	
 	@ManyToOne
 	@JoinColumn(name = "id_profissional")
@@ -42,7 +42,7 @@ public class Chamado {
 		this.descricao = descricao;
 		this.profissional = profissional;
 		this.operador = operador;
-		this.dataChamado = dataChamado;
+		this.datachamado = dataChamado;
 		this.nivel = nivel;
 	}
 
@@ -87,11 +87,11 @@ public class Chamado {
 	}
 
 	public LocalDate getDataChamado() {
-		return dataChamado;
+		return datachamado;
 	}
 
 	public void setDataChamado(LocalDate dataChamado) {
-		this.dataChamado = dataChamado;
+		this.datachamado = dataChamado;
 	}
 
 	public Nivel getNivel() {

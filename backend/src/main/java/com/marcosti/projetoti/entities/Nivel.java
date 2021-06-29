@@ -16,9 +16,9 @@ public class Nivel {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	public Long id;
-	public Integer nivel;
-	public String descricao;
+	private Long id;
+	private Integer nivel;
+	private String descricao;
 	
 	@OneToMany(mappedBy = "nivel")
 	private List<Chamado> chamados = new ArrayList<>();

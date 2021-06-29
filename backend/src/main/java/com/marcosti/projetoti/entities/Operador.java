@@ -16,12 +16,12 @@ public class Operador {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	public Long id;
-	public String operador;
-	public String cargo;
+	private Long id;
+	private String operador;
+	private String cargo;
 	
 	@OneToMany(mappedBy = "operador")
-	public List<Chamado> chamados = new ArrayList<>();
+	private List<Chamado> chamados = new ArrayList<>();
 	
 	public Operador() {}
 

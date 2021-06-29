@@ -16,9 +16,9 @@ public class Ti {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	public Long id;
-	public String profissional;
-	public String cargo;
+	private Long id;
+	private String profissional;
+	private String cargo;
 	
 	@OneToMany(mappedBy = "profissional")
 	private List<Chamado> chamados = new ArrayList<>();

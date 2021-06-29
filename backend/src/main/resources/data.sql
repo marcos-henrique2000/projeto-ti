@@ -18,9 +18,9 @@ INSERT INTO tb_operador (operador, cargo) VALUES ('Carla', 'Operador');
 INSERT INTO tb_operador (operador, cargo) VALUES ('Lucas S', 'Operador');
 INSERT INTO tb_operador (operador, cargo) VALUES ('Aline B', 'Operador');
 
-INSERT INTO tb_ti (profssional, cargo) VALUES ('Geovani', 'Coordenador de Projetos');
-INSERT INTO tb_ti (profssional, cargo) VALUES ('Daniel', 'Suporte');
-INSERT INTO tb_ti (profssional, cargo) VALUES ('Felipe', 'Suporte');
+INSERT INTO tb_ti (profissional, cargo) VALUES ('Geovani', 'Coordenador de Projetos');
+INSERT INTO tb_ti (profissional, cargo) VALUES ('Daniel', 'Suporte');
+INSERT INTO tb_ti (profissional, cargo) VALUES ('Felipe', 'Suporte');
 
 INSERT INTO tb_chamado (titulo, descricao, id_profissional, id_operador, dataChamado, id_nivel) VALUES ('Pasta não encontrada', 'If you are adding values for all the columns of the table.', 3, 9, '2020-04-06', 1);
 INSERT INTO tb_chamado (titulo, descricao, id_profissional, id_operador, dataChamado, id_nivel) VALUES ('Monitor não liga',	'If you are adding values for all the columns of the table.',	2,	10,	'2020-04-26',	1);
