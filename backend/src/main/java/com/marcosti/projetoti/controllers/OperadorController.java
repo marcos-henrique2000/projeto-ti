@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.marcosti.projetoti.dto.OperadorDTO;
+import com.marcosti.projetoti.dto.OperadorSumDTO;
 import com.marcosti.projetoti.services.OperadorService;
 
 @RestController
@@ -21,6 +22,12 @@ public class OperadorController {
 	@GetMapping
 	public ResponseEntity<List<OperadorDTO>> findAll(){
 		List<OperadorDTO> list = service.findAll();
+		return ResponseEntity.ok(list);
+	}
+	
+	@GetMapping(value = "/sum-by-operadores")
+	public ResponseEntity<List<OperadorSumDTO>> amountGroupByOperadores(){
+		List<OperadorSumDTO> list = service.amountGroupByOperadores();
 		return ResponseEntity.ok(list);
 	}
 }

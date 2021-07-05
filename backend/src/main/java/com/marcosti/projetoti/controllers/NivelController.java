@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.marcosti.projetoti.dto.NivelDTO;
+import com.marcosti.projetoti.dto.NivelSumDTO;
 import com.marcosti.projetoti.services.NivelService;
 
 @RestController
@@ -24,4 +25,9 @@ public class NivelController {
 		return ResponseEntity.ok(list);
 	}
 	
+	@GetMapping(value = "/sum-by-nivel")
+	public ResponseEntity<List<NivelSumDTO>> amountGroupByNivel(){
+		List<NivelSumDTO> list = service.amountGroupByNivel();
+		return ResponseEntity.ok(list);
+	}
 }

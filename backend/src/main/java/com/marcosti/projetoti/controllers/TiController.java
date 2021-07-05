@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.marcosti.projetoti.dto.TiSumDTO;
 import com.marcosti.projetoti.dto.TiDTO;
 import com.marcosti.projetoti.services.TiService;
 
@@ -21,6 +22,12 @@ public class TiController {
 	@GetMapping
 	public ResponseEntity<List<TiDTO>> findAll(){
 		List<TiDTO> list = service.findAll();
+		return ResponseEntity.ok(list);
+	}
+	
+	@GetMapping(value = "/sum-by-chamados")
+	public ResponseEntity<List<TiSumDTO>> amountGroupByChamados(){
+		List<TiSumDTO> list = service.amountGroupByChamados();
 		return ResponseEntity.ok(list);
 	}
 	

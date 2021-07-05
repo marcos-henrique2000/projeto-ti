@@ -18,7 +18,7 @@ public class TiDTO implements Serializable{
 		this.profissional = profissional;
 		this.cargo = cargo;
 	}
-	
+
 	public TiDTO(Ti entity) {
 		id = entity.getId();
 		profissional = entity.getProfissional();
