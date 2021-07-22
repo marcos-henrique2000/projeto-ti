@@ -6,5 +6,4 @@ import com.marcosti.projetoti.entities.Chamado;
 
 public interface ChamadoRepository extends JpaRepository<Chamado, Long>{
 	
-	
 }

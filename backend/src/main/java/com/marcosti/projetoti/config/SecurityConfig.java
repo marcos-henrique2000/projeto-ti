@@ -17,9 +17,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
+			.antMatchers("/h2-console/**").hasRole("ADMIN")
 			.anyRequest().authenticated()
-			.and()			
-			.httpBasic();
+			.and()
+			.httpBasic()
+			.and()
+			.csrf().ignoringAntMatchers("/h2-console/**")
+			.and().headers().frameOptions().sameOrigin();
 	}
 	
 	@Autowired
@@ -81,5 +85,4 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		source.registerCorsConfiguration("/**", configuration);
 		return source;
 	}
-}
-*/
+}*/

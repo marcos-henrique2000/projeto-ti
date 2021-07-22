@@ -27,4 +27,13 @@ public class OperadorService {
 	public List<OperadorSumDTO> amountGroupByOperadores(){
 		return repository.amountGroupByOperadores();
 	}
+	
+	public Operador insert(Operador obj) {
+		obj.setId(null);
+		return repository.save(obj);
+	}
+	
+	public Operador fromDTO(OperadorDTO obj) {
+		return new Operador(obj.getId(), obj.getOperador(), obj.getCargo());
+	}
 }

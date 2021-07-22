@@ -10,6 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.marcosti.projetoti.dto.OperadorDTO;
+
 @Entity
 @Table(name = "tb_operador")
 public class Operador {
@@ -29,6 +31,18 @@ public class Operador {
 		this.id = id;
 		this.operador = operador;
 		this.cargo = cargo;
+	}
+	
+	public Operador(Operador obj) {
+		id = obj.getId();
+		operador = obj.getOperador();
+		cargo = obj.getCargo();
+	}
+	
+	public Operador(OperadorDTO obj) {
+		id = obj.getId();
+		operador = obj.getOperador();
+		cargo = obj.getCargo();
 	}
 
 	public Long getId() {

@@ -10,6 +10,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.marcosti.projetoti.dto.ChamadoDTO;
+
 @Entity
 @Table(name = "tb_chamado")
 public class Chamado {
@@ -35,7 +37,13 @@ public class Chamado {
 	
 	public Chamado() {}
 
-	public Chamado(Long id, String titulo, String descricao, Ti profissional, Operador operador, LocalDate dataChamado,
+	public Chamado(
+			Long id, 
+			String titulo, 
+			String descricao, 
+			Ti profissional, 
+			Operador operador, 
+			LocalDate dataChamado,
 			Nivel nivel) {
 		this.id = id;
 		this.titulo = titulo;
@@ -44,6 +52,26 @@ public class Chamado {
 		this.operador = operador;
 		this.datachamado = dataChamado;
 		this.nivel = nivel;
+	}
+	
+	public Chamado(Chamado obj) {
+		id = obj.getId();
+		titulo = obj.getTitulo();
+		descricao = obj.getDescricao();
+		profissional = obj.getProfissional();
+		operador = obj.getOperador();
+		datachamado = obj.getDataChamado();
+		nivel = obj.getNivel();
+	}
+	
+	public Chamado(ChamadoDTO obj) {
+		id = obj.getId();
+		titulo = obj.getTitulo();
+		descricao = obj.getDescricao();
+		profissional = new Ti(obj.getProfissional());
+		operador = new Operador(obj.getOperador());
+		datachamado = obj.getDatachamado();
+		nivel = new Nivel(obj.getNivel());
 	}
 
 	public Long getId() {

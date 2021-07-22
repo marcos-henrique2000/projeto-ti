@@ -27,4 +27,13 @@ public class TiService {
 	public List<TiSumDTO> amountGroupByChamados(){
 		return repository.amountGroupByChamados();
 	}
+	
+	public Ti insert(Ti obj) {
+		obj.setId(null);
+		return repository.save(obj);
+	}
+	
+	public Ti fromDTO(TiDTO objDTO) {
+		return new Ti(objDTO.getId(), objDTO.getProfissional(), objDTO.getCargo());
+	}
 }

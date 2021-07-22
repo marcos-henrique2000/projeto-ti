@@ -37,5 +37,14 @@ public class ChamadoService {
 		
 		Page<Chamado> result = repository.findAll(pageable);
 		return result.map(x -> new ChamadoDTO(x));
-	}	
+	}
+	
+	public Chamado insert(Chamado obj) {
+		obj.setId(null);
+		return repository.save(obj);
+	}
+	
+	public Chamado fromDTO(ChamadoDTO obj) {
+		return new Chamado(obj);
+	}
 }

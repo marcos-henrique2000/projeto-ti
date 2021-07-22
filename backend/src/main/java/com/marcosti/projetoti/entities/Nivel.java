@@ -10,6 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.marcosti.projetoti.dto.NivelDTO;
+
 @Entity
 @Table(name = "tb_nivel")
 public class Nivel {
@@ -29,6 +31,18 @@ public class Nivel {
 		this.id = id;
 		this.nivel = nivel;
 		this.descricao = descricao;
+	}
+	
+	public Nivel(Nivel obj) {
+		id = obj.getId();
+		nivel = obj.getNivel();
+		descricao = obj.getDescricao();
+	}
+	
+	public Nivel(NivelDTO obj) {
+		id = obj.getId();
+		nivel = obj.getNivel();
+		descricao = obj.getDescricao();
 	}
 
 	public Long getId() {

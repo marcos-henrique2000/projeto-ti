@@ -27,4 +27,13 @@ public class NivelService {
 	public List<NivelSumDTO> amountGroupByNivel(){
 		return repository.amountGroupByNivel();
 	}
+	
+	public Nivel insert(Nivel obj) {
+		obj.setId(null);
+		return repository.save(obj);
+	}
+	
+	public Nivel fromDTO(NivelDTO objDTO) {
+		return new Nivel(objDTO.getId(), objDTO.getNivel(), objDTO.getDescricao());
+	}
 }
