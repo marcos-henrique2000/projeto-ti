@@ -39,6 +39,14 @@ public class ChamadoService {
 		return result.map(x -> new ChamadoDTO(x));
 	}
 	
+	@Transactional
+	public ChamadoDTO putChamado(Chamado obj, Long id) {
+		Chamado ch = repository.getById(id);
+		updateData(ch, obj);
+		repository.save(ch);
+		return new ChamadoDTO(ch);
+	}
+	
 	public Chamado insert(Chamado obj) {
 		obj.setId(null);
 		return repository.save(obj);
@@ -47,4 +55,15 @@ public class ChamadoService {
 	public Chamado fromDTO(ChamadoDTO obj) {
 		return new Chamado(obj);
 	}
+	
+	public void updateData(Chamado newObjt, Chamado obj) {
+		newObjt.setTitulo(obj.getTitulo());
+		newObjt.setDescricao(obj.getDescricao());
+		newObjt.setDataChamado(obj.getDataChamado());
+		newObjt.setId(obj.getId());
+		newObjt.setNivel(obj.getNivel());
+		newObjt.setOperador(obj.getOperador());
+		newObjt.setProfissional(obj.getProfissional());
+	}
+	
 }

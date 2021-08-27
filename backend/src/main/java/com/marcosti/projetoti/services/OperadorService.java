@@ -28,6 +28,19 @@ public class OperadorService {
 		return repository.amountGroupByOperadores();
 	}
 	
+	@Transactional
+	public OperadorDTO setOperador(Operador obj, Long id) {
+		Operador op = repository.getById(id);
+		updateData(op, obj);
+		repository.save(op);
+		return new OperadorDTO(op);
+	}
+	
+	public void updateData(Operador newObj, Operador obj) {
+		newObj.setCargo(obj.getCargo());
+		newObj.setOperador(obj.getOperador());
+	}
+	
 	public Operador insert(Operador obj) {
 		obj.setId(null);
 		return repository.save(obj);

@@ -1,3 +1,4 @@
+/*
 package com.marcosti.projetoti.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,7 +43,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 
 
-/*
+*/
 package com.marcosti.projetoti.config;
 
 import java.util.Arrays;
@@ -85,4 +86,4 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		source.registerCorsConfiguration("/**", configuration);
 		return source;
 	}
-}*/
+}

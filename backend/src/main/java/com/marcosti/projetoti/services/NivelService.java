@@ -28,6 +28,14 @@ public class NivelService {
 		return repository.amountGroupByNivel();
 	}
 	
+	@Transactional
+	public NivelDTO setNivel(Nivel obj, Long id) {
+		Nivel nivel = repository.getById(id);
+		updateData(nivel, obj);
+		repository.save(nivel);
+		return new NivelDTO(nivel);
+	}
+	
 	public Nivel insert(Nivel obj) {
 		obj.setId(null);
 		return repository.save(obj);
@@ -35,5 +43,11 @@ public class NivelService {
 	
 	public Nivel fromDTO(NivelDTO objDTO) {
 		return new Nivel(objDTO.getId(), objDTO.getNivel(), objDTO.getDescricao());
+	}
+	
+	private void updateData(Nivel newObj, Nivel obj) {
+		newObj.setDescricao(obj.getDescricao());
+		newObj.setId(obj.getId());
+		newObj.setNivel(obj.getNivel());
 	}
 }
